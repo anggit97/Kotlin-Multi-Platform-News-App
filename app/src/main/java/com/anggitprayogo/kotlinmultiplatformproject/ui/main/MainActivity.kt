@@ -1,7 +1,8 @@
-package com.anggitprayogo.kotlinmultiplatformproject
+package com.anggitprayogo.kotlinmultiplatformproject.ui.main
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import com.anggitprayogo.kotlinmultiplatformproject.R
 
 class MainActivity : AppCompatActivity() {
 
