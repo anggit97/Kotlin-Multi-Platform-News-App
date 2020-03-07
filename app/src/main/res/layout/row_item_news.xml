@@ -3,7 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
+    android:layout_height="wrap_content"
     android:padding="@dimen/dimen16">
 
     <ImageView
@@ -11,6 +11,7 @@
         android:layout_width="@dimen/listImageSizeStandard"
         android:layout_height="@dimen/listImageSizeStandard"
         android:contentDescription="@string/app_name"
+        android:scaleType="centerCrop"
         android:src="@mipmap/ic_launcher"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
@@ -20,7 +21,7 @@
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="@dimen/dimen7"
-        android:maxLength="2"
+        android:maxLines="2"
         android:textSize="16sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@id/ivNews"
