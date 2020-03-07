@@ -16,7 +16,7 @@ class NewsApi {
     suspend fun getNews(domain: String): Response<NewsResponse> {
         return try {
             val url =
-                ApiConfig.baseUrl.plus("everything/domains=$domain&apiKey=${ApiConfig.apiKey}")
+                ApiConfig.baseUrl.plus("everything?domains=$domain&apiKey=${ApiConfig.apiKey}")
             val json = http.get<String>(url)
             val newsResponse = Json.nonstrict.parse(NewsResponse.serializer(), json)
 
