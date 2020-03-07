@@ -2,6 +2,7 @@ import org.jetbrains.kotlin.gradle.plugin.mpp.KotlinNativeTarget
 
 plugins {
     kotlin("multiplatform")
+    id("kotlinx-serialization")
 }
 
 kotlin {
@@ -25,7 +26,7 @@ kotlin {
     sourceSets["commonMain"].dependencies {
         api("org.jetbrains.kotlin:kotlin-stdlib")
 
-        val kotlinVersion = "2.3.0"
+        val kotlinVersion = "1.3.61"
         implementation("org.jetbrains.kotlin:kotlin-stdlib-common:$kotlinVersion")
 
         // COROUTINE
@@ -44,7 +45,7 @@ kotlin {
     sourceSets["androidMain"].dependencies {
         api("org.jetbrains.kotlin:kotlin-stdlib")
 
-        val kotlinVersion = "2.3.0"
+        val kotlinVersion = "1.3.61"
         implementation("org.jetbrains.kotlin:kotlin-stdlib-common:$kotlinVersion")
 
         // COROUTINE
@@ -62,7 +63,7 @@ kotlin {
     }
 
     sourceSets["iosMain"].dependencies {
-        val kotlinVersion = "2.3.0"
+        val kotlinVersion = "1.3.61"
         implementation("org.jetbrains.kotlin:kotlin-stdlib-common:$kotlinVersion")
 
         // COROUTINE
