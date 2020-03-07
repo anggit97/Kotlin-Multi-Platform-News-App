@@ -23,11 +23,59 @@ kotlin {
     jvm("android")
 
     sourceSets["commonMain"].dependencies {
-        implementation("org.jetbrains.kotlin:kotlin-stdlib-common")
+        api("org.jetbrains.kotlin:kotlin-stdlib")
+
+        val kotlinVersion = "2.3.0"
+        implementation("org.jetbrains.kotlin:kotlin-stdlib-common:$kotlinVersion")
+
+        // COROUTINE
+        val coroutineVersion = "1.2.1"
+        implementation("org.jetbrains.kotlinx:kotlinx-coroutines-core-common:$coroutineVersion")
+
+        // SERIALIZATION
+        val serializerVersion = "0.13.0"
+        implementation("org.jetbrains.kotlinx:kotlinx-serialization-runtime-common:$serializerVersion")
+
+        // KTOR
+        val ktorVersion = "1.2.5"
+        implementation("io.ktor:ktor-client-core:$ktorVersion")
     }
 
     sourceSets["androidMain"].dependencies {
-        implementation("org.jetbrains.kotlin:kotlin-stdlib")
+        api("org.jetbrains.kotlin:kotlin-stdlib")
+
+        val kotlinVersion = "2.3.0"
+        implementation("org.jetbrains.kotlin:kotlin-stdlib-common:$kotlinVersion")
+
+        // COROUTINE
+        val coroutineVersion = "1.2.1"
+        implementation("org.jetbrains.kotlinx:kotlinx-coroutines-core:$coroutineVersion")
+        implementation("org.jetbrains.kotlinx:kotlinx-coroutines-android:$coroutineVersion")
+
+        // SERIALIZATION
+        val serializerVersion = "0.13.0"
+        implementation("org.jetbrains.kotlinx:kotlinx-serialization-runtime:$serializerVersion")
+
+        // KTOR
+        val ktorVersion = "1.2.5"
+        implementation("io.ktor:ktor-client-android:$ktorVersion")
+    }
+
+    sourceSets["iosMain"].dependencies {
+        val kotlinVersion = "2.3.0"
+        implementation("org.jetbrains.kotlin:kotlin-stdlib-common:$kotlinVersion")
+
+        // COROUTINE
+        val coroutineVersion = "1.2.1"
+        implementation("org.jetbrains.kotlinx:kotlinx-coroutines-core-native:$coroutineVersion")
+
+        // SERIALIZATION
+        val serializerVersion = "0.13.0"
+        implementation("org.jetbrains.kotlinx:kotlinx-serialization-runtime-native:$serializerVersion")
+
+        // KTOR
+        val ktorVersion = "1.2.5"
+        implementation("io.ktor:ktor-client-ios:$ktorVersion")
     }
 }
 
@@ -50,10 +98,12 @@ val packForXcode by tasks.creating(Sync::class) {
     /// generate a helpful ./gradlew wrapper with embedded Java path
     doLast {
         val gradlew = File(targetDir, "gradlew")
-        gradlew.writeText("#!/bin/bash\n"
-                + "export 'JAVA_HOME=${System.getProperty("java.home")}'\n"
-                + "cd '${rootProject.rootDir}'\n"
-                + "./gradlew \$@\n")
+        gradlew.writeText(
+            "#!/bin/bash\n"
+                    + "export 'JAVA_HOME=${System.getProperty("java.home")}'\n"
+                    + "cd '${rootProject.rootDir}'\n"
+                    + "./gradlew \$@\n"
+        )
         gradlew.setExecutable(true)
     }
 }
