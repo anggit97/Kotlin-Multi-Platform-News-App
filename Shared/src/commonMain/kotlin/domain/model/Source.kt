@@ -7,10 +7,8 @@ import kotlinx.serialization.Optional
 
 @Serializable
 data class Source(
-    @Optional
     @SerialName("id")
     val id: String?,
-    @Optional
     @SerialName("name")
     val name: String?
 )
