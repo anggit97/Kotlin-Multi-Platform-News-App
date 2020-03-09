@@ -12,6 +12,7 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import com.anggitprayogo.kotlinmultiplatformproject.R
 import com.anggitprayogo.kotlinmultiplatformproject.app.di.component.ApplicationComponent
 import com.anggitprayogo.kotlinmultiplatformproject.app.di.module.MainActivityModule
+import com.anggitprayogo.kotlinmultiplatformproject.di.InjectionToken
 import com.anggitprayogo.kotlinmultiplatformproject.ui.App
 import domain.model.Article
 import domain.model.NewsResponse
@@ -39,6 +40,7 @@ class MainActivity : AppCompatActivity() {
         initViewModel()
         observeViewModel()
         fetchData()
+        e("TOKEN : ", InjectionToken.getInjectToken())
     }
 
     private fun fetchData() {

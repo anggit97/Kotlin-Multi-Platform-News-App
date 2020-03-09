@@ -6,7 +6,7 @@ import com.anggitprayogo.kotlinmultiplatformproject.source.repository.NewsReposi
 import domain.model.NewsResponse
 
 open class GetNewsByDomainUseCase(
-    val repository: NewsRepository
+    private val repository: NewsRepository
 ) : BaseUseCase<GetNewsByDomainRequest, NewsResponse>() {
 
     override suspend fun run(): Response<NewsResponse> {

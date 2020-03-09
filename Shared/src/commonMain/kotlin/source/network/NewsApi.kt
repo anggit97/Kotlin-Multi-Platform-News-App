@@ -12,6 +12,14 @@ class NewsApi {
 
     val http = HttpClient()
 
+    private lateinit var token: String
+
+    fun setToken(token: String) {
+        this.token = token
+    }
+
+    fun getToken() = token
+
     suspend fun getNews(domain: String): Response<NewsResponse> {
         return try {
             val url =
