@@ -163,12 +163,18 @@ __attribute__((swift_name("InjectionCommon")))
 __attribute__((objc_subclassing_restricted))
 __attribute__((swift_name("InjectionToken")))
 @interface SharedInjectionToken : KotlinBase
+- (instancetype)init __attribute__((swift_name("init()"))) __attribute__((objc_designated_initializer));
++ (instancetype)new __attribute__((availability(swift, unavailable, message="use object initializers instead")));
+@property NSString *token __attribute__((swift_name("token")));
+@end;
+
+__attribute__((objc_subclassing_restricted))
+__attribute__((swift_name("InjectionToken.Companion")))
+@interface SharedInjectionTokenCompanion : KotlinBase
 + (instancetype)alloc __attribute__((unavailable));
 + (instancetype)allocWithZone:(struct _NSZone *)zone __attribute__((unavailable));
-+ (instancetype)injectionToken __attribute__((swift_name("init()")));
-- (void)injectTokenToken:(NSString *)token __attribute__((swift_name("injectToken(token:)")));
-- (NSString *)getInjectToken __attribute__((swift_name("getInjectToken()")));
-@property SharedNewsApi *newsApi __attribute__((swift_name("newsApi")));
++ (instancetype)companion __attribute__((swift_name("init()")));
+@property (readonly) SharedNewsApi *INSTANCE __attribute__((swift_name("INSTANCE")));
 @end;
 
 __attribute__((objc_subclassing_restricted))
@@ -192,9 +198,17 @@ __attribute__((swift_name("NewsApi")))
 @interface SharedNewsApi : KotlinBase
 - (instancetype)init __attribute__((swift_name("init()"))) __attribute__((objc_designated_initializer));
 + (instancetype)new __attribute__((availability(swift, unavailable, message="use object initializers instead")));
-- (void)setTokenToken:(NSString *)token __attribute__((swift_name("setToken(token:)")));
-- (NSString *)getToken __attribute__((swift_name("getToken()")));
 @property (readonly) SharedKtor_client_coreHttpClient *http __attribute__((swift_name("http")));
+@property NSString *token __attribute__((swift_name("token")));
+@end;
+
+__attribute__((objc_subclassing_restricted))
+__attribute__((swift_name("NewsApi.Companion")))
+@interface SharedNewsApiCompanion : KotlinBase
++ (instancetype)alloc __attribute__((unavailable));
++ (instancetype)allocWithZone:(struct _NSZone *)zone __attribute__((unavailable));
++ (instancetype)companion __attribute__((swift_name("init()")));
+@property (readonly) SharedNewsApi *INSTANCE __attribute__((swift_name("INSTANCE")));
 @end;
 
 __attribute__((swift_name("BasePresenter")))

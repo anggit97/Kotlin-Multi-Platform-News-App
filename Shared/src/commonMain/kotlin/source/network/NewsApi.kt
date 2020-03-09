@@ -11,14 +11,13 @@ import kotlinx.serialization.json.Json
 class NewsApi {
 
     val http = HttpClient()
+    var token = ""
 
-    private lateinit var token: String
-
-    fun setToken(token: String) {
-        this.token = token
+    companion object{
+        val INSTANCE : NewsApi by lazy {
+            NewsApi()
+        }
     }
-
-    fun getToken() = token
 
     suspend fun getNews(domain: String): Response<NewsResponse> {
         return try {

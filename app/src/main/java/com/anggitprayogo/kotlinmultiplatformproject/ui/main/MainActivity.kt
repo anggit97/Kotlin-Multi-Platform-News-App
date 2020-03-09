@@ -40,7 +40,7 @@ class MainActivity : AppCompatActivity() {
         initViewModel()
         observeViewModel()
         fetchData()
-        e("TOKEN : ", InjectionToken.getInjectToken())
+        e("TOKEN : ", InjectionToken.INSTANCE.token)
     }
 
     private fun fetchData() {

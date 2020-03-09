@@ -2,11 +2,13 @@ package com.anggitprayogo.kotlinmultiplatformproject.di
 
 import com.anggitprayogo.kotlinmultiplatformproject.source.network.NewsApi
 
-object InjectionToken {
+class InjectionToken {
 
-    var newsApi = NewsApi()
+    companion object{
+        val INSTANCE : NewsApi by lazy {
+            NewsApi()
+        }
+    }
 
-    fun injectToken(token: String) = newsApi.setToken(token)
-
-    fun getInjectToken() = newsApi.getToken()
+    var token: String = ""
 }

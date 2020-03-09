@@ -5,6 +5,7 @@ import com.anggitprayogo.kotlinmultiplatformproject.app.di.component.Application
 import com.anggitprayogo.kotlinmultiplatformproject.app.di.component.DaggerApplicationComponent
 import com.anggitprayogo.kotlinmultiplatformproject.app.di.module.ApplicationModule
 import com.anggitprayogo.kotlinmultiplatformproject.di.InjectionToken
+import com.anggitprayogo.kotlinmultiplatformproject.source.network.NewsApi
 
 open class App : MultiDexApplication() {
 
@@ -19,8 +20,8 @@ open class App : MultiDexApplication() {
     }
 
     private fun initToken() {
-        val newsApi = InjectionToken.newsApi
-        newsApi.setToken("testtoken")
+        val instance = NewsApi.INSTANCE
+        instance.token = "BGST"
     }
 
     private fun initializeDagger() {
