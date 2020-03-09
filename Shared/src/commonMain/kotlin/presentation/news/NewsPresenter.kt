@@ -19,8 +19,8 @@ class NewsPresenter(
             val response = newsByDomainUseCase.repository.getNews(domain)
             if (response is Response.Success) {
                 view?.onSuccessGetNews(response.data)
-            } else {
-                view?.onErrorGetNews("")
+            } else if (response is Response.Error) {
+                view?.onErrorGetNews(response.exception)
             }
             view?.showLoading(false)
         }
@@ -31,5 +31,5 @@ interface NewsView {
     fun showLoading(visible: Boolean)
 
     fun onSuccessGetNews(data: NewsResponse)
-    fun onErrorGetNews(exception: String)
+    fun onErrorGetNews(exception: Throwable)
 }

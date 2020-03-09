@@ -12,7 +12,6 @@ class NewsApi {
 
     val http = HttpClient()
 
-    @UnstableDefault
     suspend fun getNews(domain: String): Response<NewsResponse> {
         return try {
             val url =
