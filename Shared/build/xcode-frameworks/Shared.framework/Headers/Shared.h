@@ -214,9 +214,9 @@ __attribute__((swift_name("NewsPresenter")))
 @interface SharedNewsPresenter : SharedBasePresenter
 - (instancetype)initWithNewsByDomainUseCase:(SharedGetNewsByDomainUseCase *)newsByDomainUseCase coroutinecontext:(id<SharedKotlinCoroutineContext>)coroutinecontext __attribute__((swift_name("init(newsByDomainUseCase:coroutinecontext:)"))) __attribute__((objc_designated_initializer));
 - (instancetype)initWithCoroutineContext:(id<SharedKotlinCoroutineContext>)coroutineContext __attribute__((swift_name("init(coroutineContext:)"))) __attribute__((objc_designated_initializer)) __attribute__((unavailable));
+- (void)onViewAttachedView:(id<SharedNewsView>)view __attribute__((swift_name("onViewAttached(view:)")));
 - (void)getNewsDomain:(NSString *)domain __attribute__((swift_name("getNews(domain:)")));
 - (void)attachViewView:(id<SharedNewsView>)view __attribute__((swift_name("attachView(view:)")));
-- (void)onViewAttachedView:(id<SharedNewsView>)view __attribute__((swift_name("onViewAttached(view:)")));
 @property id<SharedNewsView> _Nullable view __attribute__((swift_name("view")));
 @end;
 

@@ -7,11 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		8FA65591241283D900AE5454 /* SharedCode.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8FA6558D2412829800AE5454 /* SharedCode.framework */; };
-		8FA65592241283D900AE5454 /* SharedCode.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 8FA6558D2412829800AE5454 /* SharedCode.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		8F22D3C52416490E00F1F860 /* Shared.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8F22D3C42416490E00F1F860 /* Shared.framework */; };
+		8F22D3C62416490E00F1F860 /* Shared.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 8F22D3C42416490E00F1F860 /* Shared.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		8F22D3C92416493700F1F860 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F22D3C82416493700F1F860 /* ViewController.swift */; };
 		8FD751CD24127EAF009D0C29 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FD751CC24127EAF009D0C29 /* AppDelegate.swift */; };
-		8FD751CF24127EAF009D0C29 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FD751CE24127EAF009D0C29 /* SceneDelegate.swift */; };
-		8FD751D124127EAF009D0C29 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FD751D024127EAF009D0C29 /* ContentView.swift */; };
 		8FD751D324127EB1009D0C29 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8FD751D224127EB1009D0C29 /* Assets.xcassets */; };
 		8FD751D624127EB1009D0C29 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8FD751D524127EB1009D0C29 /* Preview Assets.xcassets */; };
 		8FD751D924127EB1009D0C29 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8FD751D724127EB1009D0C29 /* LaunchScreen.storyboard */; };
@@ -37,13 +36,13 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
-		8FA65593241283D900AE5454 /* Embed Frameworks */ = {
+		8F22D3C72416490E00F1F860 /* Embed Frameworks */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				8FA65592241283D900AE5454 /* SharedCode.framework in Embed Frameworks */,
+				8F22D3C62416490E00F1F860 /* Shared.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -51,11 +50,10 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		8FA6558D2412829800AE5454 /* SharedCode.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SharedCode.framework; path = "../Shared/build/xcode-frameworks/SharedCode.framework"; sourceTree = "<group>"; };
+		8F22D3C42416490E00F1F860 /* Shared.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Shared.framework; path = "../Shared/build/xcode-frameworks/Shared.framework"; sourceTree = "<group>"; };
+		8F22D3C82416493700F1F860 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		8FD751C924127EAF009D0C29 /* example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = example.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8FD751CC24127EAF009D0C29 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		8FD751CE24127EAF009D0C29 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		8FD751D024127EAF009D0C29 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		8FD751D224127EB1009D0C29 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		8FD751D524127EB1009D0C29 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		8FD751D824127EB1009D0C29 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -73,7 +71,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8FA65591241283D900AE5454 /* SharedCode.framework in Frameworks */,
+				8F22D3C52416490E00F1F860 /* Shared.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -97,7 +95,7 @@
 		8FA6558C2412829800AE5454 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				8FA6558D2412829800AE5454 /* SharedCode.framework */,
+				8F22D3C42416490E00F1F860 /* Shared.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -127,12 +125,11 @@
 			isa = PBXGroup;
 			children = (
 				8FD751CC24127EAF009D0C29 /* AppDelegate.swift */,
-				8FD751CE24127EAF009D0C29 /* SceneDelegate.swift */,
-				8FD751D024127EAF009D0C29 /* ContentView.swift */,
 				8FD751D224127EB1009D0C29 /* Assets.xcassets */,
 				8FD751D724127EB1009D0C29 /* LaunchScreen.storyboard */,
 				8FD751DA24127EB1009D0C29 /* Info.plist */,
 				8FD751D424127EB1009D0C29 /* Preview Content */,
+				8F22D3C82416493700F1F860 /* ViewController.swift */,
 			);
 			path = example;
 			sourceTree = "<group>";
@@ -173,7 +170,7 @@
 				8FD751C524127EAF009D0C29 /* Sources */,
 				8FD751C624127EAF009D0C29 /* Frameworks */,
 				8FD751C724127EAF009D0C29 /* Resources */,
-				8FA65593241283D900AE5454 /* Embed Frameworks */,
+				8F22D3C72416490E00F1F860 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -296,8 +293,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				8FD751CD24127EAF009D0C29 /* AppDelegate.swift in Sources */,
-				8FD751CF24127EAF009D0C29 /* SceneDelegate.swift in Sources */,
-				8FD751D124127EAF009D0C29 /* ContentView.swift in Sources */,
+				8F22D3C92416493700F1F860 /* ViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
