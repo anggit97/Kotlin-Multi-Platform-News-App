@@ -26,7 +26,7 @@ kotlin {
     sourceSets["commonMain"].dependencies {
         api("org.jetbrains.kotlin:kotlin-stdlib")
 
-        val kotlinVersion = "1.3.61"
+        val kotlinVersion = "1.3.50"
         implementation("org.jetbrains.kotlin:kotlin-stdlib-common:$kotlinVersion")
 
         // COROUTINE
