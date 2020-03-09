@@ -19,7 +19,6 @@ object InjectionCommon {
         return GetNewsByDomainUseCase(newsRepository)
     }
 
-
     /**
      * Presenter
      */

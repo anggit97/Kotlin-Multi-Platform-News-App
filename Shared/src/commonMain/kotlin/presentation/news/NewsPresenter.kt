@@ -20,7 +20,7 @@ class NewsPresenter(
             if (response is Response.Success) {
                 view?.onSuccessGetNews(response.data)
             } else {
-                view?.onErrorGetNews(Exception("tolol"))
+                view?.onErrorGetNews("")
             }
             view?.showLoading(false)
         }
@@ -31,5 +31,5 @@ interface NewsView {
     fun showLoading(visible: Boolean)
 
     fun onSuccessGetNews(data: NewsResponse)
-    fun onErrorGetNews(exception: Exception)
+    fun onErrorGetNews(exception: String)
 }
