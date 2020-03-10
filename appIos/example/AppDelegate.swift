@@ -16,8 +16,8 @@ var window: UIWindow?
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
-        let initToken = InjectionToken().newsApi
-        initToken.setToken(token: "BGST")
+        NewsApi.Companion().invoke()
+        NewsApi.Companion().token = "Anjing"
         window = UIWindow()
         window?.makeKeyAndVisible()
         window?.rootViewController = ViewController()

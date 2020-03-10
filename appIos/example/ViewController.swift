@@ -48,6 +48,7 @@ class ViewController: UIViewController, NewsView, UITableViewDelegate, UITableVi
         let presenter = injection.provideNewsPresenter()
         presenter.attachView(view: self)
         presenter.getNews(domain: "wsj.com,nytimes.com")
+        debugPrint(NewsApi.Companion().token)
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {

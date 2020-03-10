@@ -7,11 +7,13 @@ import io.ktor.client.HttpClient
 import io.ktor.client.request.get
 import kotlinx.serialization.json.Json
 import kotlin.jvm.Volatile
+import kotlin.native.concurrent.ThreadLocal
 
 class NewsApi {
 
     val http = HttpClient()
 
+    @ThreadLocal
     companion object {
         @Volatile
         private var instances: NewsApi? = null
