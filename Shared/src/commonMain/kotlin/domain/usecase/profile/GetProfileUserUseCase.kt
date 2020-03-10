@@ -5,7 +5,7 @@ import com.anggitprayogo.kotlinmultiplatformproject.domain.usecase.base.BaseUseC
 import com.anggitprayogo.kotlinmultiplatformproject.source.repository.UserProfileRepository
 import domain.model.profile.UserProfileResponse
 
-class GetProfileUserUseCase(
+open class GetProfileUserUseCase(
     private val userProfileRepository: UserProfileRepository
 ) : BaseUseCase<GetProfileRequest, UserProfileResponse>(){
 

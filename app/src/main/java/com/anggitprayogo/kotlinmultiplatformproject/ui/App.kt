@@ -6,6 +6,7 @@ import com.anggitprayogo.kotlinmultiplatformproject.app.di.component.Application
 import com.anggitprayogo.kotlinmultiplatformproject.app.di.component.DaggerApplicationComponent
 import com.anggitprayogo.kotlinmultiplatformproject.app.di.module.ApplicationModule
 import com.anggitprayogo.kotlinmultiplatformproject.source.network.NewsApi
+import com.anggitprayogo.kotlinmultiplatformproject.source.network.NgampoozApi
 
 open class App : MultiDexApplication() {
 
@@ -20,9 +21,8 @@ open class App : MultiDexApplication() {
     }
 
     private fun initToken() {
-//        val instance = NewsApi.invoke()
-        NewsApi.token = "bgst"
-//        v("TOKEN 1 : ", instance.toString())
+        NgampoozApi.invoke()
+        NgampoozApi.token = "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwczpcL1wvZGV2Lm5nYW1wb296LmNvbVwvYXBpXC9hdXRoXC9sb2dpbiIsImlhdCI6MTU4MzI5MTI2NSwiZXhwIjoxNTk4ODQzMjY1LCJuYmYiOjE1ODMyOTEyNjUsImp0aSI6IlZWWVp4OGc0N0VBZXlKY3giLCJzdWIiOjEyOTI1NSwicHJ2IjoiODdlMGFmMWVmOWZkMTU4MTJmZGVjOTcxNTNhMTRlMGIwNDc1NDZhYSJ9.9NlfeEHjKAGgUzB0o3HOXaBZkdrph06j3v3vDhl2gDM"
     }
 
     private fun initializeDagger() {

@@ -26,14 +26,13 @@ class NgampoozApi {
 
     suspend fun getProfile(): Response<UserProfileResponse> {
         return try {
-
-            http.get<HttpRequestBuilder> {
-                header("Authorization", "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwczpcL1wvZGV2Lm5nYW1wb296LmNvbVwvYXBpXC9hdXRoXC9sb2dpbiIsImlhdCI6MTU4MzI5MTI2NSwiZXhwIjoxNTk4ODQzMjY1LCJuYmYiOjE1ODMyOTEyNjUsImp0aSI6IlZWWVp4OGc0N0VBZXlKY3giLCJzdWIiOjEyOTI1NSwicHJ2IjoiODdlMGFmMWVmOWZkMTU4MTJmZGVjOTcxNTNhMTRlMGIwNDc1NDZhYSJ9.9NlfeEHjKAGgUzB0o3HOXaBZkdrph06j3v3vDhl2gDM")
-            }
-
+            token
             val url =
                 ApiConfig.baseUrlNgampooz.plus("profile/me")
-            val json = http.get<String>(url)
+            val json = http.get<String>(url) {
+                header("Authorization", "Bearer $token")
+                header("Accept", "application/json")
+            }
             val newsResponse = Json.nonstrict.parse(UserProfileResponse.serializer(), json)
 
             Response.Success(newsResponse)

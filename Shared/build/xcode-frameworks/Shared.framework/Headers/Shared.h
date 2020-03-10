@@ -357,7 +357,6 @@ __attribute__((swift_name("GetProfileRequest")))
 - (BOOL)validate __attribute__((swift_name("validate()")));
 @end;
 
-__attribute__((objc_subclassing_restricted))
 __attribute__((swift_name("GetProfileUserUseCase")))
 @interface SharedGetProfileUserUseCase : SharedBaseUseCase
 - (instancetype)initWithUserProfileRepository:(SharedUserProfileRepository *)userProfileRepository __attribute__((swift_name("init(userProfileRepository:)"))) __attribute__((objc_designated_initializer));

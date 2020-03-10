@@ -15,6 +15,7 @@ import com.anggitprayogo.kotlinmultiplatformproject.app.di.component.Application
 import com.anggitprayogo.kotlinmultiplatformproject.app.di.module.MainActivityModule
 import com.anggitprayogo.kotlinmultiplatformproject.di.InjectionToken
 import com.anggitprayogo.kotlinmultiplatformproject.source.network.NewsApi
+import com.anggitprayogo.kotlinmultiplatformproject.source.network.NgampoozApi
 import com.anggitprayogo.kotlinmultiplatformproject.ui.App
 import domain.model.Article
 import domain.model.NewsResponse
@@ -44,7 +45,7 @@ class MainActivity : AppCompatActivity() {
         observeViewModel()
         fetchData()
 
-        v("TOKEN : ", NewsApi.token)
+        v("TOKEN : ", NgampoozApi.token)
     }
 
     private fun fetchData() {
