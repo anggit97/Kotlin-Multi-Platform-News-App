@@ -11,4 +11,8 @@ class DomainModule{
     @Provides
     @Singleton
     fun provideGetNewsByDomainUseCase() = InjectionCommon.provideGetNewsUseCase()
+
+    @Provides
+    @Singleton
+    fun provideGetProfileUseCase() = InjectionCommon.provideGetProfileUseCase()
 }

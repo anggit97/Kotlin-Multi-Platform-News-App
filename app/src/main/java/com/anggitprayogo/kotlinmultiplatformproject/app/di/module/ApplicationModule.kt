@@ -10,7 +10,4 @@ class ApplicationModule(val app: App) {
 
     @Provides @Singleton
     fun provideApp() : App = app
-
-//    @Provides @Singleton
-//    fun provideNavigator() =
 }

@@ -18,6 +18,7 @@ import com.anggitprayogo.kotlinmultiplatformproject.source.network.NewsApi
 import com.anggitprayogo.kotlinmultiplatformproject.ui.App
 import domain.model.Article
 import domain.model.NewsResponse
+import domain.model.profile.UserProfileResponse
 import kotlinx.android.synthetic.main.activity_main.*
 import javax.inject.Inject
 
@@ -43,11 +44,12 @@ class MainActivity : AppCompatActivity() {
         observeViewModel()
         fetchData()
 
-        v("TOKEN : ",NewsApi.token)
+        v("TOKEN : ", NewsApi.token)
     }
 
     private fun fetchData() {
         mainViewModel.getNewsByDomain("wsj.com,nytimes.com")
+        mainViewModel.getProfile()
     }
 
     private fun initInjection(app: ApplicationComponent) {
@@ -68,6 +70,22 @@ class MainActivity : AppCompatActivity() {
         mainViewModel.getNewsByDomainLiveData.observe(this, Observer {
             handleGetNewsByDomainResponse(it)
         })
+
+        mainViewModel.getProfileLiveData.observe(this, Observer {
+            handleGetProfileResponse(it)
+        })
+
+        mainViewModel.getError.observe(this, Observer {
+            handleErrorResponse(it)
+        })
+    }
+
+    private fun handleErrorResponse(error: String?) {
+        e("ERROR : ", error)
+    }
+
+    private fun handleGetProfileResponse(data: UserProfileResponse?) {
+        e("PROFILE : ", data.toString())
     }
 
     private fun handleGetNewsByDomainResponse(data: NewsResponse?) {

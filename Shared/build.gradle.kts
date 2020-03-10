@@ -40,6 +40,7 @@ kotlin {
         // KTOR
         val ktorVersion = "1.2.5"
         implementation("io.ktor:ktor-client-core:$ktorVersion")
+        implementation("io.ktor:ktor-client-auth:$ktorVersion")
     }
 
     sourceSets["androidMain"].dependencies {
@@ -60,6 +61,7 @@ kotlin {
         // KTOR
         val ktorVersion = "1.2.5"
         implementation("io.ktor:ktor-client-android:$ktorVersion")
+        implementation("io.ktor:ktor-client-auth:$ktorVersion")
     }
 
     sourceSets["iosMain"].dependencies {
@@ -77,6 +79,7 @@ kotlin {
         // KTOR
         val ktorVersion = "1.2.5"
         implementation("io.ktor:ktor-client-ios:$ktorVersion")
+        implementation("io.ktor:ktor-client-auth-native:$ktorVersion")
     }
 }
 

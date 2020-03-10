@@ -6,9 +6,9 @@
 #import <Foundation/NSString.h>
 #import <Foundation/NSValue.h>
 
-@class SharedGetNewsByDomainUseCase, SharedNewsPresenter, SharedNewsApi, SharedKtor_client_coreHttpClient, SharedPresenterCoroutineScope, SharedBasePresenter, SharedNewsResponse, SharedKotlinThrowable, SharedResponse, SharedBaseUseCase, SharedNewsRepository, SharedGetNewsByDomainRequest, SharedSource, SharedArticle, SharedKtor_client_coreHttpClientConfig, SharedKotlinx_coroutines_coreCoroutineDispatcher, SharedKtor_client_coreHttpClientEngineConfig, SharedKtor_client_coreHttpReceivePipeline, SharedKtor_client_coreHttpRequestPipeline, SharedKtor_client_coreHttpResponsePipeline, SharedKtor_client_coreHttpSendPipeline, SharedKotlinArray, SharedKotlinx_coroutines_coreCancellationException, SharedKtor_utilsAttributeKey, SharedKotlinAbstractCoroutineContextElement, SharedKtor_client_coreHttpResponseConfig, SharedKtor_utilsPipelinePhase, SharedKtor_utilsPipeline, SharedKotlinException, SharedKotlinRuntimeException, SharedKotlinIllegalStateException, SharedKotlinx_serialization_runtimeEnumDescriptor, SharedKotlinx_serialization_runtimeSerialKind, SharedKotlinNothing, SharedKotlinx_serialization_runtimeUpdateMode, SharedKotlinx_ioCharset, SharedKotlinx_coroutines_coreAtomicDesc, SharedKotlinx_serialization_runtimeSerialClassDescImpl, SharedKotlinEnum, SharedKotlinx_ioCharsetDecoder, SharedKotlinx_ioCharsetEncoder, SharedKotlinx_coroutines_coreAtomicOp, SharedKotlinx_coroutines_coreOpDescriptor;
+@class SharedGetNewsByDomainUseCase, SharedNewsPresenter, SharedGetProfileUserUseCase, SharedProfilePresenter, SharedNewsApi, SharedNgampoozApi, SharedKtor_client_coreHttpClient, SharedPresenterCoroutineScope, SharedBasePresenter, SharedUserProfileResponse, SharedKotlinThrowable, SharedNewsResponse, SharedResponse, SharedBaseUseCase, SharedNewsRepository, SharedGetNewsByDomainRequest, SharedUserProfileRepository, SharedGetProfileRequest, SharedSource, SharedArticle, SharedFoto, SharedIdProfession, SharedUserDetail, SharedKtor_client_coreHttpClientConfig, SharedKotlinx_coroutines_coreCoroutineDispatcher, SharedKtor_client_coreHttpClientEngineConfig, SharedKtor_client_coreHttpReceivePipeline, SharedKtor_client_coreHttpRequestPipeline, SharedKtor_client_coreHttpResponsePipeline, SharedKtor_client_coreHttpSendPipeline, SharedKotlinArray, SharedKotlinx_coroutines_coreCancellationException, SharedKtor_utilsAttributeKey, SharedKotlinAbstractCoroutineContextElement, SharedKtor_client_coreHttpResponseConfig, SharedKtor_utilsPipelinePhase, SharedKtor_utilsPipeline, SharedKotlinException, SharedKotlinRuntimeException, SharedKotlinIllegalStateException, SharedKotlinx_serialization_runtimeEnumDescriptor, SharedKotlinx_serialization_runtimeSerialKind, SharedKotlinNothing, SharedKotlinx_serialization_runtimeUpdateMode, SharedKotlinx_ioCharset, SharedKotlinx_coroutines_coreAtomicDesc, SharedKotlinx_serialization_runtimeSerialClassDescImpl, SharedKotlinEnum, SharedKotlinx_ioCharsetDecoder, SharedKotlinx_ioCharsetEncoder, SharedKotlinx_coroutines_coreAtomicOp, SharedKotlinx_coroutines_coreOpDescriptor;
 
-@protocol SharedKotlinCoroutineContext, SharedKotlinx_coroutines_coreCoroutineScope, SharedNewsView, SharedBaseRequest, SharedKotlinx_coroutines_coreChannel, SharedKotlinx_serialization_runtimeKSerializer, SharedKotlinx_ioCloseable, SharedKtor_client_coreHttpClientEngine, SharedKtor_utilsAttributes, SharedKotlinCoroutineContextElement, SharedKotlinCoroutineContextKey, SharedKotlinx_coroutines_coreSelectClause2, SharedKotlinx_coroutines_coreSendChannel, SharedKotlinx_coroutines_coreChannelIterator, SharedKotlinx_coroutines_coreSelectClause1, SharedKotlinx_coroutines_coreReceiveChannel, SharedKotlinx_serialization_runtimeEncoder, SharedKotlinx_serialization_runtimeSerialDescriptor, SharedKotlinx_serialization_runtimeSerializationStrategy, SharedKotlinx_serialization_runtimeDecoder, SharedKotlinx_serialization_runtimeDeserializationStrategy, SharedKtor_client_coreHttpClientFeature, SharedKotlinContinuation, SharedKotlinContinuationInterceptor, SharedKotlinx_coroutines_coreRunnable, SharedKotlinSuspendFunction2, SharedKotlinIterator, SharedKotlinx_coroutines_coreSelectInstance, SharedKotlinSuspendFunction1, SharedKotlinx_serialization_runtimeCompositeEncoder, SharedKotlinx_serialization_runtimeSerialModule, SharedKotlinAnnotation, SharedKotlinx_serialization_runtimeCompositeDecoder, SharedKotlinSuspendFunction, SharedKotlinx_coroutines_coreDisposableHandle, SharedKotlinx_serialization_runtimeGeneratedSerializer, SharedKotlinx_serialization_runtimeSerialModuleCollector, SharedKotlinKClass, SharedKotlinComparable, SharedKotlinKDeclarationContainer, SharedKotlinKAnnotatedElement, SharedKotlinKClassifier;
+@protocol SharedKotlinCoroutineContext, SharedKotlinx_coroutines_coreCoroutineScope, SharedProfileView, SharedNewsView, SharedBaseRequest, SharedKotlinx_coroutines_coreChannel, SharedKotlinx_serialization_runtimeKSerializer, SharedKotlinx_ioCloseable, SharedKtor_client_coreHttpClientEngine, SharedKtor_utilsAttributes, SharedKotlinCoroutineContextElement, SharedKotlinCoroutineContextKey, SharedKotlinx_coroutines_coreSelectClause2, SharedKotlinx_coroutines_coreSendChannel, SharedKotlinx_coroutines_coreChannelIterator, SharedKotlinx_coroutines_coreSelectClause1, SharedKotlinx_coroutines_coreReceiveChannel, SharedKotlinx_serialization_runtimeEncoder, SharedKotlinx_serialization_runtimeSerialDescriptor, SharedKotlinx_serialization_runtimeSerializationStrategy, SharedKotlinx_serialization_runtimeDecoder, SharedKotlinx_serialization_runtimeDeserializationStrategy, SharedKtor_client_coreHttpClientFeature, SharedKotlinContinuation, SharedKotlinContinuationInterceptor, SharedKotlinx_coroutines_coreRunnable, SharedKotlinSuspendFunction2, SharedKotlinIterator, SharedKotlinx_coroutines_coreSelectInstance, SharedKotlinSuspendFunction1, SharedKotlinx_serialization_runtimeCompositeEncoder, SharedKotlinx_serialization_runtimeSerialModule, SharedKotlinAnnotation, SharedKotlinx_serialization_runtimeCompositeDecoder, SharedKotlinSuspendFunction, SharedKotlinx_coroutines_coreDisposableHandle, SharedKotlinx_serialization_runtimeGeneratedSerializer, SharedKotlinx_serialization_runtimeSerialModuleCollector, SharedKotlinKClass, SharedKotlinComparable, SharedKotlinKDeclarationContainer, SharedKotlinKAnnotatedElement, SharedKotlinKClassifier;
 
 NS_ASSUME_NONNULL_BEGIN
 #pragma clang diagnostic push
@@ -158,6 +158,8 @@ __attribute__((swift_name("InjectionCommon")))
 + (instancetype)injectionCommon __attribute__((swift_name("init()")));
 - (SharedGetNewsByDomainUseCase *)provideGetNewsUseCase __attribute__((swift_name("provideGetNewsUseCase()")));
 - (SharedNewsPresenter *)provideNewsPresenter __attribute__((swift_name("provideNewsPresenter()")));
+- (SharedGetProfileUserUseCase *)provideGetProfileUseCase __attribute__((swift_name("provideGetProfileUseCase()")));
+- (SharedProfilePresenter *)provideProfilePresenter __attribute__((swift_name("provideProfilePresenter()")));
 @end;
 
 __attribute__((objc_subclassing_restricted))
@@ -185,12 +187,19 @@ __attribute__((swift_name("ApiConfig")))
 + (instancetype)apiConfig __attribute__((swift_name("init()")));
 @property (readonly) NSString *apiKey __attribute__((swift_name("apiKey")));
 @property (readonly) NSString *baseUrl __attribute__((swift_name("baseUrl")));
+@property (readonly) NSString *baseUrlNgampooz __attribute__((swift_name("baseUrlNgampooz")));
 @end;
 
 __attribute__((objc_subclassing_restricted))
 __attribute__((swift_name("NewsRepository")))
 @interface SharedNewsRepository : KotlinBase
 - (instancetype)initWithNewsApi:(SharedNewsApi *)newsApi __attribute__((swift_name("init(newsApi:)"))) __attribute__((objc_designated_initializer));
+@end;
+
+__attribute__((objc_subclassing_restricted))
+__attribute__((swift_name("UserProfileRepository")))
+@interface SharedUserProfileRepository : KotlinBase
+- (instancetype)initWithNgampoozApi:(SharedNgampoozApi *)ngampoozApi __attribute__((swift_name("init(ngampoozApi:)"))) __attribute__((objc_designated_initializer));
 @end;
 
 __attribute__((objc_subclassing_restricted))
@@ -208,6 +217,24 @@ __attribute__((swift_name("NewsApi.Companion")))
 + (instancetype)allocWithZone:(struct _NSZone *)zone __attribute__((unavailable));
 + (instancetype)companion __attribute__((swift_name("init()")));
 - (SharedNewsApi *)invoke __attribute__((swift_name("invoke()")));
+@property NSString * _Nullable token __attribute__((swift_name("token")));
+@end;
+
+__attribute__((objc_subclassing_restricted))
+__attribute__((swift_name("NgampoozApi")))
+@interface SharedNgampoozApi : KotlinBase
+- (instancetype)init __attribute__((swift_name("init()"))) __attribute__((objc_designated_initializer));
++ (instancetype)new __attribute__((availability(swift, unavailable, message="use object initializers instead")));
+@property (readonly) SharedKtor_client_coreHttpClient *http __attribute__((swift_name("http")));
+@end;
+
+__attribute__((objc_subclassing_restricted))
+__attribute__((swift_name("NgampoozApi.Companion")))
+@interface SharedNgampoozApiCompanion : KotlinBase
++ (instancetype)alloc __attribute__((unavailable));
++ (instancetype)allocWithZone:(struct _NSZone *)zone __attribute__((unavailable));
++ (instancetype)companion __attribute__((swift_name("init()")));
+- (SharedNgampoozApi *)invoke __attribute__((swift_name("invoke()")));
 @property NSString * _Nullable token __attribute__((swift_name("token")));
 @end;
 
@@ -234,6 +261,25 @@ __attribute__((swift_name("PresenterCoroutineScope")))
 - (instancetype)initWithContext:(id<SharedKotlinCoroutineContext>)context __attribute__((swift_name("init(context:)"))) __attribute__((objc_designated_initializer));
 - (void)viewDetached __attribute__((swift_name("viewDetached()")));
 @property (readonly) id<SharedKotlinCoroutineContext> coroutineContext __attribute__((swift_name("coroutineContext")));
+@end;
+
+__attribute__((objc_subclassing_restricted))
+__attribute__((swift_name("ProfilePresenter")))
+@interface SharedProfilePresenter : SharedBasePresenter
+- (instancetype)initWithUserProfileUserUseCase:(SharedGetProfileUserUseCase *)userProfileUserUseCase coroutineContext:(id<SharedKotlinCoroutineContext>)coroutineContext __attribute__((swift_name("init(userProfileUserUseCase:coroutineContext:)"))) __attribute__((objc_designated_initializer));
+- (instancetype)initWithCoroutineContext:(id<SharedKotlinCoroutineContext>)coroutineContext __attribute__((swift_name("init(coroutineContext:)"))) __attribute__((objc_designated_initializer)) __attribute__((unavailable));
+- (void)onViewAttachedView:(id<SharedProfileView>)view __attribute__((swift_name("onViewAttached(view:)")));
+- (void)getProfile __attribute__((swift_name("getProfile()")));
+- (void)attachViewView:(id<SharedProfileView>)view __attribute__((swift_name("attachView(view:)")));
+@property id<SharedProfileView> _Nullable view __attribute__((swift_name("view")));
+@end;
+
+__attribute__((swift_name("ProfileView")))
+@protocol SharedProfileView
+@required
+- (void)showLoadingVisibility:(BOOL)visibility __attribute__((swift_name("showLoading(visibility:)")));
+- (void)onSuccessGetProfileData:(SharedUserProfileResponse *)data __attribute__((swift_name("onSuccessGetProfile(data:)")));
+- (void)onErrorGetProfileException:(SharedKotlinThrowable *)exception __attribute__((swift_name("onErrorGetProfile(exception:)")));
 @end;
 
 __attribute__((objc_subclassing_restricted))
@@ -301,6 +347,23 @@ __attribute__((swift_name("GetNewsByDomainUseCase")))
 - (instancetype)init __attribute__((swift_name("init()"))) __attribute__((objc_designated_initializer)) __attribute__((unavailable));
 + (instancetype)new __attribute__((unavailable));
 @property SharedGetNewsByDomainRequest * _Nullable request __attribute__((swift_name("request")));
+@end;
+
+__attribute__((objc_subclassing_restricted))
+__attribute__((swift_name("GetProfileRequest")))
+@interface SharedGetProfileRequest : KotlinBase <SharedBaseRequest>
+- (instancetype)init __attribute__((swift_name("init()"))) __attribute__((objc_designated_initializer));
++ (instancetype)new __attribute__((availability(swift, unavailable, message="use object initializers instead")));
+- (BOOL)validate __attribute__((swift_name("validate()")));
+@end;
+
+__attribute__((objc_subclassing_restricted))
+__attribute__((swift_name("GetProfileUserUseCase")))
+@interface SharedGetProfileUserUseCase : SharedBaseUseCase
+- (instancetype)initWithUserProfileRepository:(SharedUserProfileRepository *)userProfileRepository __attribute__((swift_name("init(userProfileRepository:)"))) __attribute__((objc_designated_initializer));
+- (instancetype)init __attribute__((swift_name("init()"))) __attribute__((objc_designated_initializer)) __attribute__((unavailable));
++ (instancetype)new __attribute__((unavailable));
+@property SharedGetProfileRequest * _Nullable request __attribute__((swift_name("request")));
 @end;
 
 __attribute__((objc_subclassing_restricted))
@@ -380,6 +443,122 @@ __attribute__((swift_name("Source")))
 __attribute__((objc_subclassing_restricted))
 __attribute__((swift_name("Source.Companion")))
 @interface SharedSourceCompanion : KotlinBase
++ (instancetype)alloc __attribute__((unavailable));
++ (instancetype)allocWithZone:(struct _NSZone *)zone __attribute__((unavailable));
++ (instancetype)companion __attribute__((swift_name("init()")));
+- (id<SharedKotlinx_serialization_runtimeKSerializer>)serializer __attribute__((swift_name("serializer()")));
+@end;
+
+__attribute__((objc_subclassing_restricted))
+__attribute__((swift_name("Foto")))
+@interface SharedFoto : KotlinBase
+- (instancetype)initWithOriginal:(NSString * _Nullable)original thumb:(NSString * _Nullable)thumb __attribute__((swift_name("init(original:thumb:)"))) __attribute__((objc_designated_initializer));
+- (BOOL)isEqual:(id _Nullable)other __attribute__((swift_name("isEqual(_:)")));
+- (NSUInteger)hash __attribute__((swift_name("hash()")));
+- (NSString *)description __attribute__((swift_name("description()")));
+- (NSString * _Nullable)component1 __attribute__((swift_name("component1()")));
+- (NSString * _Nullable)component2 __attribute__((swift_name("component2()")));
+- (SharedFoto *)doCopyOriginal:(NSString * _Nullable)original thumb:(NSString * _Nullable)thumb __attribute__((swift_name("doCopy(original:thumb:)")));
+@property (readonly) NSString * _Nullable original __attribute__((swift_name("original")));
+@property (readonly) NSString * _Nullable thumb __attribute__((swift_name("thumb")));
+@end;
+
+__attribute__((objc_subclassing_restricted))
+__attribute__((swift_name("Foto.Companion")))
+@interface SharedFotoCompanion : KotlinBase
++ (instancetype)alloc __attribute__((unavailable));
++ (instancetype)allocWithZone:(struct _NSZone *)zone __attribute__((unavailable));
++ (instancetype)companion __attribute__((swift_name("init()")));
+- (id<SharedKotlinx_serialization_runtimeKSerializer>)serializer __attribute__((swift_name("serializer()")));
+@end;
+
+__attribute__((objc_subclassing_restricted))
+__attribute__((swift_name("IdProfession")))
+@interface SharedIdProfession : KotlinBase
+- (instancetype)initWithId:(SharedInt * _Nullable)id namaProfesi:(NSString * _Nullable)namaProfesi __attribute__((swift_name("init(id:namaProfesi:)"))) __attribute__((objc_designated_initializer));
+- (BOOL)isEqual:(id _Nullable)other __attribute__((swift_name("isEqual(_:)")));
+- (NSUInteger)hash __attribute__((swift_name("hash()")));
+- (NSString *)description __attribute__((swift_name("description()")));
+- (SharedInt * _Nullable)component1 __attribute__((swift_name("component1()")));
+- (NSString * _Nullable)component2 __attribute__((swift_name("component2()")));
+- (SharedIdProfession *)doCopyId:(SharedInt * _Nullable)id namaProfesi:(NSString * _Nullable)namaProfesi __attribute__((swift_name("doCopy(id:namaProfesi:)")));
+@property (readonly) SharedInt * _Nullable id __attribute__((swift_name("id")));
+@property (readonly) NSString * _Nullable namaProfesi __attribute__((swift_name("namaProfesi")));
+@end;
+
+__attribute__((objc_subclassing_restricted))
+__attribute__((swift_name("IdProfession.Companion")))
+@interface SharedIdProfessionCompanion : KotlinBase
++ (instancetype)alloc __attribute__((unavailable));
++ (instancetype)allocWithZone:(struct _NSZone *)zone __attribute__((unavailable));
++ (instancetype)companion __attribute__((swift_name("init()")));
+- (id<SharedKotlinx_serialization_runtimeKSerializer>)serializer __attribute__((swift_name("serializer()")));
+@end;
+
+__attribute__((objc_subclassing_restricted))
+__attribute__((swift_name("UserDetail")))
+@interface SharedUserDetail : KotlinBase
+- (instancetype)initWithBiodata:(NSString * _Nullable)biodata jenisKelamin:(NSString * _Nullable)jenisKelamin tanggalLahir:(NSString * _Nullable)tanggalLahir website:(NSString * _Nullable)website __attribute__((swift_name("init(biodata:jenisKelamin:tanggalLahir:website:)"))) __attribute__((objc_designated_initializer));
+- (BOOL)isEqual:(id _Nullable)other __attribute__((swift_name("isEqual(_:)")));
+- (NSUInteger)hash __attribute__((swift_name("hash()")));
+- (NSString *)description __attribute__((swift_name("description()")));
+- (NSString * _Nullable)component1 __attribute__((swift_name("component1()")));
+- (NSString * _Nullable)component2 __attribute__((swift_name("component2()")));
+- (NSString * _Nullable)component3 __attribute__((swift_name("component3()")));
+- (NSString * _Nullable)component4 __attribute__((swift_name("component4()")));
+- (SharedUserDetail *)doCopyBiodata:(NSString * _Nullable)biodata jenisKelamin:(NSString * _Nullable)jenisKelamin tanggalLahir:(NSString * _Nullable)tanggalLahir website:(NSString * _Nullable)website __attribute__((swift_name("doCopy(biodata:jenisKelamin:tanggalLahir:website:)")));
+@property (readonly) NSString * _Nullable biodata __attribute__((swift_name("biodata")));
+@property (readonly) NSString * _Nullable jenisKelamin __attribute__((swift_name("jenisKelamin")));
+@property (readonly) NSString * _Nullable tanggalLahir __attribute__((swift_name("tanggalLahir")));
+@property (readonly) NSString * _Nullable website __attribute__((swift_name("website")));
+@end;
+
+__attribute__((objc_subclassing_restricted))
+__attribute__((swift_name("UserDetail.Companion")))
+@interface SharedUserDetailCompanion : KotlinBase
++ (instancetype)alloc __attribute__((unavailable));
++ (instancetype)allocWithZone:(struct _NSZone *)zone __attribute__((unavailable));
++ (instancetype)companion __attribute__((swift_name("init()")));
+- (id<SharedKotlinx_serialization_runtimeKSerializer>)serializer __attribute__((swift_name("serializer()")));
+@end;
+
+__attribute__((objc_subclassing_restricted))
+__attribute__((swift_name("UserProfileResponse")))
+@interface SharedUserProfileResponse : KotlinBase
+- (instancetype)initWithEmail:(NSString * _Nullable)email foto:(SharedFoto * _Nullable)foto id:(SharedInt * _Nullable)id idProfession:(SharedIdProfession * _Nullable)idProfession jenisSekolah:(NSString * _Nullable)jenisSekolah memberCard:(NSString * _Nullable)memberCard nama:(NSString * _Nullable)nama nomorInduk:(NSString * _Nullable)nomorInduk statusAktif:(NSString * _Nullable)statusAktif telepon:(NSString * _Nullable)telepon universitas:(NSString * _Nullable)universitas userDetail:(SharedUserDetail * _Nullable)userDetail __attribute__((swift_name("init(email:foto:id:idProfession:jenisSekolah:memberCard:nama:nomorInduk:statusAktif:telepon:universitas:userDetail:)"))) __attribute__((objc_designated_initializer));
+- (BOOL)isEqual:(id _Nullable)other __attribute__((swift_name("isEqual(_:)")));
+- (NSUInteger)hash __attribute__((swift_name("hash()")));
+- (NSString *)description __attribute__((swift_name("description()")));
+- (NSString * _Nullable)component1 __attribute__((swift_name("component1()")));
+- (SharedFoto * _Nullable)component2 __attribute__((swift_name("component2()")));
+- (SharedInt * _Nullable)component3 __attribute__((swift_name("component3()")));
+- (SharedIdProfession * _Nullable)component4 __attribute__((swift_name("component4()")));
+- (NSString * _Nullable)component5 __attribute__((swift_name("component5()")));
+- (NSString * _Nullable)component6 __attribute__((swift_name("component6()")));
+- (NSString * _Nullable)component7 __attribute__((swift_name("component7()")));
+- (NSString * _Nullable)component8 __attribute__((swift_name("component8()")));
+- (NSString * _Nullable)component9 __attribute__((swift_name("component9()")));
+- (NSString * _Nullable)component10 __attribute__((swift_name("component10()")));
+- (NSString * _Nullable)component11 __attribute__((swift_name("component11()")));
+- (SharedUserDetail * _Nullable)component12 __attribute__((swift_name("component12()")));
+- (SharedUserProfileResponse *)doCopyEmail:(NSString * _Nullable)email foto:(SharedFoto * _Nullable)foto id:(SharedInt * _Nullable)id idProfession:(SharedIdProfession * _Nullable)idProfession jenisSekolah:(NSString * _Nullable)jenisSekolah memberCard:(NSString * _Nullable)memberCard nama:(NSString * _Nullable)nama nomorInduk:(NSString * _Nullable)nomorInduk statusAktif:(NSString * _Nullable)statusAktif telepon:(NSString * _Nullable)telepon universitas:(NSString * _Nullable)universitas userDetail:(SharedUserDetail * _Nullable)userDetail __attribute__((swift_name("doCopy(email:foto:id:idProfession:jenisSekolah:memberCard:nama:nomorInduk:statusAktif:telepon:universitas:userDetail:)")));
+@property (readonly) NSString * _Nullable email __attribute__((swift_name("email")));
+@property (readonly) SharedFoto * _Nullable foto __attribute__((swift_name("foto")));
+@property (readonly) SharedInt * _Nullable id __attribute__((swift_name("id")));
+@property (readonly) SharedIdProfession * _Nullable idProfession __attribute__((swift_name("idProfession")));
+@property (readonly) NSString * _Nullable jenisSekolah __attribute__((swift_name("jenisSekolah")));
+@property (readonly) NSString * _Nullable memberCard __attribute__((swift_name("memberCard")));
+@property (readonly) NSString * _Nullable nama __attribute__((swift_name("nama")));
+@property (readonly) NSString * _Nullable nomorInduk __attribute__((swift_name("nomorInduk")));
+@property (readonly) NSString * _Nullable statusAktif __attribute__((swift_name("statusAktif")));
+@property (readonly) NSString * _Nullable telepon __attribute__((swift_name("telepon")));
+@property (readonly) NSString * _Nullable universitas __attribute__((swift_name("universitas")));
+@property (readonly) SharedUserDetail * _Nullable userDetail __attribute__((swift_name("userDetail")));
+@end;
+
+__attribute__((objc_subclassing_restricted))
+__attribute__((swift_name("UserProfileResponse.Companion")))
+@interface SharedUserProfileResponseCompanion : KotlinBase
 + (instancetype)alloc __attribute__((unavailable));
 + (instancetype)allocWithZone:(struct _NSZone *)zone __attribute__((unavailable));
 + (instancetype)companion __attribute__((swift_name("init()")));
