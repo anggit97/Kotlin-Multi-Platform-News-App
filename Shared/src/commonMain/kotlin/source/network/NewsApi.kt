@@ -5,18 +5,18 @@ import com.anggitprayogo.kotlinmultiplatformproject.domain.Response
 import domain.model.NewsResponse
 import io.ktor.client.HttpClient
 import io.ktor.client.request.get
-import kotlinx.serialization.UnstableDefault
 import kotlinx.serialization.json.Json
+import kotlin.jvm.Volatile
 
 class NewsApi {
 
     val http = HttpClient()
-    var token = ""
 
-    companion object{
-        val INSTANCE : NewsApi by lazy {
-            NewsApi()
-        }
+    companion object {
+        @Volatile
+        private var instances: NewsApi? = null
+        operator fun invoke() = instances ?: NewsApi()
+        var token : String? = null
     }
 
     suspend fun getNews(domain: String): Response<NewsResponse> {

@@ -1,10 +1,10 @@
 package com.anggitprayogo.kotlinmultiplatformproject.ui
 
+import android.util.Log.v
 import androidx.multidex.MultiDexApplication
 import com.anggitprayogo.kotlinmultiplatformproject.app.di.component.ApplicationComponent
 import com.anggitprayogo.kotlinmultiplatformproject.app.di.component.DaggerApplicationComponent
 import com.anggitprayogo.kotlinmultiplatformproject.app.di.module.ApplicationModule
-import com.anggitprayogo.kotlinmultiplatformproject.di.InjectionToken
 import com.anggitprayogo.kotlinmultiplatformproject.source.network.NewsApi
 
 open class App : MultiDexApplication() {
@@ -20,8 +20,9 @@ open class App : MultiDexApplication() {
     }
 
     private fun initToken() {
-        val instance = NewsApi.INSTANCE
-        instance.token = "BGST"
+//        val instance = NewsApi.invoke()
+        NewsApi.token = "bgst"
+//        v("TOKEN 1 : ", instance.toString())
     }
 
     private fun initializeDagger() {
