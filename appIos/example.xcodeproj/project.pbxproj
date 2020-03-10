@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		502E1D9424177E5100E18F41 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 502E1D9324177E5100E18F41 /* ProfileViewController.swift */; };
 		8F22D3C52416490E00F1F860 /* Shared.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8F22D3C42416490E00F1F860 /* Shared.framework */; };
 		8F22D3C62416490E00F1F860 /* Shared.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 8F22D3C42416490E00F1F860 /* Shared.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		8F22D3C92416493700F1F860 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F22D3C82416493700F1F860 /* ViewController.swift */; };
@@ -50,6 +51,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		502E1D9324177E5100E18F41 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		8F22D3C42416490E00F1F860 /* Shared.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Shared.framework; path = "../Shared/build/xcode-frameworks/Shared.framework"; sourceTree = "<group>"; };
 		8F22D3C82416493700F1F860 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		8FD751C924127EAF009D0C29 /* example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = example.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -130,6 +132,7 @@
 				8FD751DA24127EB1009D0C29 /* Info.plist */,
 				8FD751D424127EB1009D0C29 /* Preview Content */,
 				8F22D3C82416493700F1F860 /* ViewController.swift */,
+				502E1D9324177E5100E18F41 /* ProfileViewController.swift */,
 			);
 			path = example;
 			sourceTree = "<group>";
@@ -292,6 +295,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				502E1D9424177E5100E18F41 /* ProfileViewController.swift in Sources */,
 				8FD751CD24127EAF009D0C29 /* AppDelegate.swift in Sources */,
 				8F22D3C92416493700F1F860 /* ViewController.swift in Sources */,
 			);
